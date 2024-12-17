@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "camerarent_gateway/app.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/users/(.*)",
+        "dest": "/camerarent_users/app.js"
+      },
+      {
+        "src": "/products/(.*)",
+        "dest": "/camerarent_products/app.js"
+      }
+    ]
+  }
+  
